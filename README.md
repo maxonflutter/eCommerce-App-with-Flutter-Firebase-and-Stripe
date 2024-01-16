@@ -158,10 +158,41 @@ firebase deploy --only functions
 ```
 
 
+7. Get the function endpoint URL from Firebase. Use your Cloud Function's URLs in the payment client `packages/payment_client/lib/src/payment_client.dart`
+
+```dart
+// TODO: Add your Cloud Functions URLs here
+const ENDPOINT_METHOD_ID_URL =
+    "...";
+
+const ENDPOINT_INTENT_ID_URL =
+    "...";
+```
+
 ### Step 4: Set up the Cloud Firestore Data Bundles
 The eCommerce loads the categories' data using a Data Bundle. The Cloud Firestore data are exported into a static data file using the Firestore Bundle Builder extension. 
 
 1. Install the extension into your Firebase project: https://firebase.google.com/docs/extensions/official/firestore-bundle-builder
 2. Watch the video tutorial: https://youtu.be/xYgIY_1ulhw
+3. Get the function endpoint URL from Firebase. Use the Cloud Function's URLs to retrieve the static file in the categories repository `lib/repositories/category_repository.dart`
+
+```dart
+
+  Future<List<Category>> fetchCategories() async {
+    try {
+      final categoriesData = await dbClient.fetchAllFromBundle(
+        collection: 'categories',
+        // TODO: Add your bundle URL here
+        bundleUrl: '...',
+      );
+      return categoriesData
+          .map<Category>((categoryData) =>
+              Category.fromJson(categoryData.data, id: categoryData.id))
+          .toList();
+    } catch (err) {
+      throw Exception('Failed to fetch the categories: $err');
+    }
+  }
+```
 
 
