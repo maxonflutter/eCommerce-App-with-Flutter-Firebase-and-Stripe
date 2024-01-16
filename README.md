@@ -4,7 +4,13 @@ The eCommerce App template gives you a simple, ready-to-use eCommerce app that y
 ![Intro](screenshots/ecommerce.png) 
 
 
+The code in the repository is the starter code for the eCommerce App with Flutter, Firebase and Stripe. It will help you to follow along the video:
+- YouTube video: https://youtu.be/xYgIY_1ulhw
+- Full tutorial at: coming soon 
+
 ## Screenshots
+These screenshot represents the final eCommerce App that is available for purchase at: coming soon 
+
 ## App Screenshots: 
 |![Home](screenshots/ecommerce-home.png) | ![Categories](screenshots/ecommerce-categories.png) | ![Catalog](screenshots/ecommerce-catalog-screen.png) |
 |:---:|:---:|:---:|
