@@ -9,7 +9,7 @@ The code in the repository is the starter code for the eCommerce App with Flutte
 - Full tutorial at: coming soon 
 
 ## Screenshots
-These screenshot represents the final eCommerce App that is available for purchase at: coming soon 
+These screenshots represent the final eCommerce App template that is available for purchase at: coming soon 
 
 ## App Screenshots: 
 |![Home](screenshots/ecommerce-home.png) | ![Categories](screenshots/ecommerce-categories.png) | ![Catalog](screenshots/ecommerce-catalog-screen.png) |
